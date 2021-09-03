@@ -264,8 +264,8 @@ window.onload = wrap_img;
 <p>Since the inner pair is the addition to itself. Like we analyzed in the 1 digit scenario, the addition to itself will always produce an even number. Therefore, the middle pair needs a 1 from the carryover of the pair c+a to become an odd number. In addition, it implies that the middle pair must not have a carryover otherwise the carryover will cause the pair a+c become an even number based on the fact that a+c needs to be an odd number.</p>
 <p>Thus, we restrict those solutions to meet the following requirements:</p>
 <ol>
-<li>b+b $\lt$ 10 and b+b is an even number.  </li>
-<li>20 $&gt;$ a+c $&gt;$ 10 and a+c is an odd number.  </li>
+<li>b+b &lt; 10 and b+b is an even number.  </li>
+<li>20 &gt; a+c &gt; 10 and a+c is an odd number.  </li>
 </ol>
 <p>Therefore, there are 5 * 20 = 100 solutions.</p>
 
@@ -279,8 +279,8 @@ Then, the sum can be written as: a+d_b+c_c+b_d+a. We are referring a+d as the ou
 <p>This is like the scenario that we analyzed in the 2 digits case that d+a must not have a carryover and has to be an odd number and so does the pair, c+b. However, since the pair c and b is in the middle, c+b can be 0.</p>
 <p>Thus, the solutions need to meet those requirements:</p>
 <ol>
-<li>a+d $&lt;$ 10 and a+b is an odd number.  </li>
-<li>c+b $&lt;$ 10 and c+b is an odd number and can be 0.  </li>
+<li>a+d &lt; 10 and a+b is an odd number.  </li>
+<li>c+b &lt; 10 and c+b is an odd number and can be 0.  </li>
 </ol>
 <p>Therefore, there are 20*30 = 600 solutions.</p>
 
@@ -555,13 +555,13 @@ For number of digits in 3 and 7, solutions = 100 </em> 500^n where n = (# of dig
 <p>While we are looping through the number list, we will need a helper function to check whether the current number is a prime or not. If we find the prime, we will add that number to the sum.</p>
 <p>Within the helper function, we are trying to check whether the input number is a prime or not. This is accomplished by dividing the factors of the input number into two halves. These two halves of factors are mirroring with each other if the number is not prime. We can use number 64 as the illustration. 64 can be obtained from the multiplication of the following pairs:</p>
 <ol>
-<li>$1 * 64 $</li>
-<li>$2 * 32 $</li>
-<li>$4 * 16 $</li>
-<li>$8 * 8  $</li>
-<li>$16 * 4 $</li>
-<li>$32 * 2 $</li>
-<li>$64 * 1 $  </li>
+<li>1 * 64 </li>
+<li>2 * 32</li>
+<li>4 * 16</li>
+<li>8 * 8</li>
+<li>16 * 4</li>
+<li>32 * 2</li>
+<li>64 * 1  </li>
 </ol>
 <p>We can see that the square root of the number is the number can help to divide the factors into two halves. In addition, you may also think what if the square root of number is not an integer. We will then use the nearest integer of the square root as the mirror line. Thus, we can generate a list of factors that are below the mirror number to check whether the input number can be divided by those factors. As long as we find a factor of that number besides 1 and itself, we will return False as the indication of that number is not a prime and the function that generates the sum of the primes will increment by 1 to move to the next number in the list.</p>
 <p>Below shows how the solution is coded into functions to solve the question:</p>
