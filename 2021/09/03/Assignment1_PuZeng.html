@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Math is Fun - BIOSTAT 823 Assignment | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Math is Fun - BIOSTAT 823 Assignment" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/09/03/Assignment1_PuZeng.html" />
+<meta property="og:url" content="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/09/03/Assignment1_PuZeng.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-03T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-09-03T00:00:00-05:00","url":"https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/09/03/Assignment1_PuZeng.html","@type":"BlogPosting","headline":"Math is Fun - BIOSTAT 823 Assignment","dateModified":"2021-09-03T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/09/03/Assignment1_PuZeng.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BIOSTAT823_Blog_PuZeng/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/BIOSTAT823_Blog_PuZeng/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BIOSTAT823_Blog_PuZeng/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/about/">About Me</a><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/search/">Search</a><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Math is Fun - BIOSTAT 823 Assignment</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-03T00:00:00-05:00" itemprop="datePublished">
+        Sep 3, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      14 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/puzeng/BIOSTAT823_Blog_PuZeng/tree/master/_notebooks/2021-09-03-Assignment1_PuZeng.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/puzeng/BIOSTAT823_Blog_PuZeng/master?filepath=_notebooks%2F2021-09-03-Assignment1_PuZeng.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/puzeng/BIOSTAT823_Blog_PuZeng/blob/master/_notebooks/2021-09-03-Assignment1_PuZeng.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-09-03-Assignment1_PuZeng.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This post will consist my solutions for 3 questions taken from <a href="https://projecteuler.net/archives">Euler Project</a> which they are:</p>
+
+<pre><code>1. How many reversible numbers are there below one-billon? (ID: 145, solved by 16438 people)  
+2. Permuted multiples. (ID: 52, solved by 65547 people)  
+3. Summation of primes. (ID: 10, solved by 330347 people)
+
+</code></pre>
+<p>This post can be retrieved from <a href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/">Pu's Blog for Biostat823</a>. And the post is auto-converted by Fastpages based on a jupyter nootebook where is kept in the <a href="https://github.com/puzeng/BIOSTAT823_Blog_PuZeng">Pu's BIOSTAT823 repo</a> under the folder of _notebooks.</p>
+<p>Repository can be accessd through this website: <a href="https://github.com/puzeng/BIOSTAT823_Blog_PuZeng">https://github.com/puzeng/BIOSTAT823_Blog_PuZeng</a>.</p>
+<p>The post can be accessed from here: <a href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/">https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-How-many-reversible-numbers-are-there-below-one-billion?">1. How many reversible numbers are there below one-billion?<a class="anchor-link" href="#1.-How-many-reversible-numbers-are-there-below-one-billion?"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>"Some positive integers n have the property that the sum [ n + reverse(n) ] consists entirely of odd (decimal) digits. For instance, 36 + 63 = 99 and 409 + 904 = 1313. We will call such numbers reversible; so 36, 63, 409, and 904 are reversible. Leading zeroes are not allowed in either n or reverse(n).</p>
+<p>There are 120 reversible numbers below one-thousand.</p>
+<p>How many reversible numbers are there below one-billion ($10^9$)?"</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a question posted on the <a href="https://projecteuler.net/problem=145">Euler Project</a> which was solved by 16435 people so far. I'm going to walk you through the analytical process that I took for solving the problem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This a question that can be solved by a brute force method which means that it can be solved by checking whether the number meet the property that the sum of itself and revsersed number will only have odd digits. Below shows the brute force approach for this question.</p>
+<h3 id="Brute-Force-Approach">Brute Force Approach<a class="anchor-link" href="#Brute-Force-Approach"> </a></h3><p>First, we need a helper function (is_reversible(input_number)) to identify whether the number is meeting the property or not which is the sum of itself and the reversed number only consists of odd digits. Within the helper function, if the number can be divided by 10, then the number immediately disqualified for be a reversible number. Then, we need to generate the sum of itself and the reversed number. To reverse the number, we can convert the number into a string to reverse it by using [::-1], lastly converting to integer again.</p>
+<p>Once we generate the sum, we can check the digits of the sum by extracting each digit of the number. If the digit is an even digit, then the number is disqualified. But if the digit is odd, we keep checking on the next digit. For a number is reversible, the number can successfully go through the while loop and return True at the end line of the function.</p>
+<p>Then, we use this helper function inside the function for counting the number of reversible numbers within a range that user defined. The count function starts with generating a list of number that is within the user defined range. Next, we are going to use a for loop to loop through the list to check each number of the list by using the helper function. If it is a reversible number, we increase the count by 1. The count function lastly will return the count which tells us how many reversible numbers within the defined range.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_reversible</span><span class="p">(</span><span class="n">input_number</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper function for checking whether the numeber is reversible or not.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">input_number</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="n">reversed_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">input_number</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">sum_n_reverse</span> <span class="o">=</span> <span class="n">reversed_number</span> <span class="o">+</span> <span class="n">input_number</span>
+    
+    <span class="k">while</span> <span class="n">sum_n_reverse</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sum_n_reverse</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">sum_n_reverse</span> <span class="o">//=</span> <span class="mi">10</span>
+        
+    <span class="k">return</span> <span class="kc">True</span>
+        
+
+<span class="k">def</span> <span class="nf">count_reversible_numbers</span><span class="p">(</span><span class="n">input_numbers</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Count the number of reversible numbers below one billion.&quot;&quot;&quot;</span>
+    <span class="n">input_list</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">input_numbers</span><span class="p">)</span>
+    <span class="c1">#target_list = list()</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">input_list</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_reversible</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+            <span class="c1">#target_list.append(number)</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="c1">#return(target_list)</span>
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="n">count_reversible_numbers</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>120</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But since we are dealing with a range like one billion numbers, the brute force method is very insufficient in computation. Therefore, we can analyze the question by finding a pattern in the base cases.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can approach this question by analyzing the different scenarios causing by the addition between digits. I will give detailed explanation about how this approach works in the following.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Analytical-Approach">Analytical Approach<a class="anchor-link" href="#Analytical-Approach"> </a></h3><h3 id="range(10^1)">range(10^1)<a class="anchor-link" href="#range(10^1)"> </a></h3><p>In the range of numbers are in 1 digits, those number are all disqualified to be reversible since the addition of the numbers between 1-9 to itself is an even number. Therefore, we can't find any reversible number when the numbers are in 1 digit.</p>
+<p>There is no solution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^2)">range(10^2)<a class="anchor-link" href="#range(10^2)"> </a></h3><p>When the numbers are in 2 digits, we can use ab to represent the number in 2 digits. Then, the sum of itself and the reversed number is represented by: a+b_b+a. To meet the property, a+b must be an odd number and cannot have a carryover. In the other words, a+b &lt; 10 and a+b is an odd number.</p>
+<p>There are 20 pairs of a and b to meet this requirement.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^3)">range(10^3)<a class="anchor-link" href="#range(10^3)"> </a></h3><p>When the numbers are in 3 digits, we us abc to represent. Then, the sum of itself and the reversed number = a+c_b+b_c+a. We can refer c+a as the outer pair and b+b as the inner pair.</p>
+<p>Since the inner pair is the addition to itself. Like we analyzed in the 1 digit scenario, the addition to itself will always produce an even number. Therefore, the middle pair needs a 1 from the carryover of the pair c+a to become an odd number. In addition, it implies that the middle pair must not have a carryover otherwise the carryover will cause the pair a+c become an even number based on the fact that a+c needs to be an odd number.</p>
+<p>Thus, we restrict those solutions to meet the following requirements:</p>
+<ol>
+<li>b+b $\lt$ 10 and b+b is an even number.  </li>
+<li>20 $&gt;$ a+c $&gt;$ 10 and a+c is an odd number.  </li>
+</ol>
+<p>Therefore, there are 5 * 20 = 100 solutions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^4)">range(10^4)<a class="anchor-link" href="#range(10^4)"> </a></h3><p>We can use abcd to represent numbers in 4 digits.<br />
+Then, the sum can be written as: a+d_b+c_c+b_d+a. We are referring a+d as the outer pair and b+c as the inner pair.</p>
+<p>This is like the scenario that we analyzed in the 2 digits case that d+a must not have a carryover and has to be an odd number and so does the pair, c+b. However, since the pair c and b is in the middle, c+b can be 0.</p>
+<p>Thus, the solutions need to meet those requirements:</p>
+<ol>
+<li>a+d $&lt;$ 10 and a+b is an odd number.  </li>
+<li>c+b $&lt;$ 10 and c+b is an odd number and can be 0.  </li>
+</ol>
+<p>Therefore, there are 20*30 = 600 solutions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^5)">range(10^5)<a class="anchor-link" href="#range(10^5)"> </a></h3><p>Numbers in 5 digits can be represented as abcde.<br />
+Then, the sum = a+e_b+d_c+c_d+b_e+a.</p>
+<p>Since c+c is the addition to itself, it will generate the even number. It also implied that c+c will borrow the 1 from the carryover of d+b. And this also tells us that a+e will take the 1 from the carryover of b+d to become an odd number.</p>
+<p>Thus, we have the follow restrictions:</p>
+<ol>
+<li>c+c is an even number.  </li>
+<li>b+d &gt; 10 and is an odd number.  </li>
+<li>a+e is an odd number.  </li>
+</ol>
+<p>However, there is no solution since the a+e needs to be an odd number and needs to take 1 from the carryover of b+d.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^6)">range(10^6)<a class="anchor-link" href="#range(10^6)"> </a></h3><p>Numbers in 6 digits can be represented as abcdef.<br />
+The sum = a+f_b+e_c+d_d+c_e+b_f+a.</p>
+<p>This scenario is also pretty much like the 2 digits case where:</p>
+<ol>
+<li>c+d &lt; 10 and c+d can be an odd number including 0.  </li>
+<li>b+e &lt;10 and has to be an odd number including 0.  </li>
+<li>a+f &lt;10 and has to be an odd number excluding 0.  </li>
+</ol>
+<p>Therefore, we have 20*30^2 solutions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^7)">range(10^7)<a class="anchor-link" href="#range(10^7)"> </a></h3><p>Numbers in 7 digits can be represented as abcdefg.<br />
+The sum = a+g_b+f_c+e_d+d_e+c_f+b_g+a.</p>
+<p>The solutions must meet the following restrictions:</p>
+<ol>
+<li>d+d &lt; 10 and must be an even number.  </li>
+<li>c+e &gt; 10 and must be an odd number including 0.  </li>
+<li>f+b &lt; 10 and must be an odd number including 0.  </li>
+<li>a+g &lt; 10 and must be an odd number excluding 0.  </li>
+</ol>
+<p>Thus, there are 5 <em> 20 </em> 20 <em> 25 = 100 </em> 500 solutions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^8)">range(10^8)<a class="anchor-link" href="#range(10^8)"> </a></h3><p>Numbers in 8 digits can be represented as abcdefgh.<br />
+The sum = a+h_b+g_c+f_d+e_e+d_f+c_g+b_h+a.</p>
+<p>The solutions must meet the following restrictions like the case in 2 or 4 or 6 digits:</p>
+<ol>
+<li>a+h &lt; 10 and must be an odd number excluding 0.  </li>
+<li>b+g, c+f, and d+e &lt; 10 and must be an odd number including 0.  </li>
+</ol>
+<p>Thus, there are 20 * 30^3 solutions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="range(10^9)">range(10^9)<a class="anchor-link" href="#range(10^9)"> </a></h3><p>Numbers in 9 digits can be represented as abcdefghi.<br />
+The sum = a+i_b+h_c+g_d+f_e+e_f+d_g+c_h+b_i+a.</p>
+<p>This case is pretty much similar like the case for 5 digits that we cannot find solutions. The reason why is that e+e needs the 1 from the carryover of d+f since the addition of e itself will only generate the even number. However, it also means that c+g, h+b are both &gt;10 and they are even numbers. Thus, since a+i has to be an odd number, a+i will be changed to even due to the carryover from b+h.</p>
+<p>Thus, there is no solution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Analytical-Approach:-Summary">Analytical Approach: Summary<a class="anchor-link" href="#Analytical-Approach:-Summary"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since we have done with analyzing those base cases from 1 digit to 9 digits, we can generalize the solutions based on the pattern.</p>
+<p>For the number of digits in 1, 5, and 9, solutions = 0.<br />
+For number of digits in 2, 4, 6, and 8, solutions = 20 <em> 30^n where n = # of digits / 2 - 1.<br />
+For number of digits in 3 and 7, solutions = 100 </em> 500^n where n = (# of digits -3) / 4.</p>
+<p>Based on the pattern, we can transform it into a function.</p>
+<p>First, we need to figure out what those cases in that number range by finding the maximum numbers of digits that this numer range can hold. For that, we just need to take the log of the input number of base 10. And then, we evaluate the digit number based on the pattern that we found:</p>
+<ol>
+<li>If the digit number can be divided by 2, then the count = 20 * 30^(digits/2-1).  </li>
+<li>If the digit number can be expressed as 4<em>i+3 for i = 0,1,2,3,..., then the count = 100 </em> 500^[(digits-3)/4]. </li>
+<li>If the digit number failed to meet the above two requirements, then there is no solution.  </li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Below is the function for counting the number of reversible numbers within a defined number range based on analytical approach:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">count_reversible_nums</span><span class="p">(</span><span class="n">num_range</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Count the number of the reversible numbers within a input-range.&quot;&quot;&quot;</span>
+    <span class="n">pow_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">num_range</span><span class="p">))</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">power</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">pow_number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">power</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">30</span> <span class="p">,</span><span class="n">power</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">power</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="p">(</span><span class="n">power</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+            
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+
+<span class="n">count_reversible_nums</span><span class="p">(</span><span class="mi">1000000000</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>608720</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-Permuted-Multiples">2. Permuted Multiples<a class="anchor-link" href="#2.-Permuted-Multiples"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>"It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.</p>
+<p>Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits."</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a question posted on the <a href="https://projecteuler.net/problem=52">Euler Project</a> which was solved by 65547 people so far (ID: 52). I'm going to walk you through the process that I took for solving the problem.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can start with number 2 and move up by 1 until the smallest positive integer that satisfies the requirement is found. To check the requirement, we need to generate several numbers that are corresponding to 2-6 times of that positive integer.</p>
+<p>And then, a helper function will check whether the positive integer and the corresponding multiple of that number contain the same digits or not. Within the helper function, the checking process will be accomplished by comparing the two sorted numbers after converting them into strings.</p>
+<p>Once we confirm that those multiples of that positive integer have the same digits as the positive integer itself, we will stop the increments and return to that current number.</p>
+<p>Below is showing how the solution is coded into a function.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">same_digits</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper function to check whether two numbers contain same digits.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num1</span><span class="p">))</span> <span class="o">==</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num2</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">permuted_multiple</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Find the smallest positive integer x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.&quot;&quot;&quot;</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+        <span class="n">two_times</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">2</span>
+        <span class="n">three_times</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="n">four_times</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">4</span>
+        <span class="n">five_times</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">5</span>
+        <span class="n">six_times</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="mi">6</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">same_digits</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">two_times</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">same_digits</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">three_times</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">same_digits</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">four_times</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">same_digits</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">five_times</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">same_digits</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">six_times</span><span class="p">)</span> <span class="p">):</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">return</span> <span class="n">num</span>
+        <span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">num</span>
+
+<span class="n">permuted_multiple</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>142857</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Summation-of-Primes">3. Summation of Primes<a class="anchor-link" href="#3.-Summation-of-Primes"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>"The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.</p>
+<p>Find the sum of all the primes below two million."</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is a question posted on the <a href="https://projecteuler.net/problem=10">Euler Project</a> which was solved by 330347 people so far (ID: 10).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To approach this question, we can start with creating a list that contains every positive integers below the number range and then looping through the list to find all the primes. Since we are looping through the number list, we can exclude some integers from the list prior to the looping process to save some energy.</p>
+<p>As we know that the prime is a number that can only be divided by 1 or itself, therefore any even number greater than 2 will automatically excluded from being a prime number since even numbers can be divided by 2. Thus, we can remove those even numbers greater than 2 from the number list.</p>
+<p>In addition, any number ends in 5 can also be removed from the list since those numbers can be divided by 5.</p>
+<p>Then, we will send the cleaned number list into a for loop to loop through the remainning numbers in the list and sum up all the primes in the list.</p>
+<p>While we are looping through the number list, we will need a helper function to check whether the current number is a prime or not. If we find the prime, we will add that number to the sum.</p>
+<p>Within the helper function, we are trying to check whether the input number is a prime or not. This is accomplished by dividing the factors of the input number into two halves. These two halves of factors are mirroring with each other if the number is not prime. We can use number 64 as the illustration. 64 can be obtained from the multiplication of the following pairs:</p>
+<ol>
+<li>$1 * 64 $</li>
+<li>$2 * 32 $</li>
+<li>$4 * 16 $</li>
+<li>$8 * 8  $</li>
+<li>$16 * 4 $</li>
+<li>$32 * 2 $</li>
+<li>$64 * 1 $  </li>
+</ol>
+<p>We can see that the square root of the number is the number can help to divide the factors into two halves. In addition, you may also think what if the square root of number is not an integer. We will then use the nearest integer of the square root as the mirror line. Thus, we can generate a list of factors that are below the mirror number to check whether the input number can be divided by those factors. As long as we find a factor of that number besides 1 and itself, we will return False as the indication of that number is not a prime and the function that generates the sum of the primes will increment by 1 to move to the next number in the list.</p>
+<p>Below shows how the solution is coded into functions to solve the question:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+
+<span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helper function to check whether the number is a prime or not.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">sum_primes_below_num_range</span><span class="p">(</span><span class="n">num_range</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Sum all the primes below the input number range.&quot;&quot;&quot;</span>
+    <span class="c1"># remove all the even number above 3 but below 2 million</span>
+    <span class="n">list_nums</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">num_range</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1">#remove all the numbers above 5 but end in 5 from the list</span>
+    <span class="n">removed_nums</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="n">num_range</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">list_nums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">list_nums</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">removed_nums</span><span class="p">))</span>
+
+    
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">list_nums</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">sum</span> <span class="o">+=</span> <span class="n">ele</span>
+
+    <span class="k">return</span> <span class="nb">sum</span>
+
+<span class="n">sum_primes_below_num_range</span><span class="p">(</span><span class="mi">2000000</span><span class="p">)</span>
+        
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>142913828922</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/BIOSTAT823_Blog_PuZeng/2021/09/03/Assignment1_PuZeng.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BIOSTAT823_Blog_PuZeng/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BIOSTAT823_Blog_PuZeng/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
