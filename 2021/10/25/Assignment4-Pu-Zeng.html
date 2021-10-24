@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>A Dashboard Visualization | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="A Dashboard Visualization" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/10/25/Assignment4-Pu-Zeng.html" />
+<meta property="og:url" content="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/10/25/Assignment4-Pu-Zeng.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-25T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/10/25/Assignment4-Pu-Zeng.html","@type":"BlogPosting","headline":"A Dashboard Visualization","dateModified":"2021-10-25T00:00:00-05:00","datePublished":"2021-10-25T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/2021/10/25/Assignment4-Pu-Zeng.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BIOSTAT823_Blog_PuZeng/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://puzeng.github.io/BIOSTAT823_Blog_PuZeng/feed.xml" title="fastpages" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/BIOSTAT823_Blog_PuZeng/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BIOSTAT823_Blog_PuZeng/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/about/">About Me</a><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/search/">Search</a><a class="page-link" href="/BIOSTAT823_Blog_PuZeng/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A Dashboard Visualization</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-25T00:00:00-05:00" itemprop="datePublished">
+        Oct 25, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      8 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/puzeng/BIOSTAT823_Blog_PuZeng/tree/master/_notebooks/2021-10-25-Assignment4-Pu-Zeng.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/puzeng/BIOSTAT823_Blog_PuZeng/master?filepath=_notebooks%2F2021-10-25-Assignment4-Pu-Zeng.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/puzeng/BIOSTAT823_Blog_PuZeng/blob/master/_notebooks/2021-10-25-Assignment4-Pu-Zeng.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/BIOSTAT823_Blog_PuZeng/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-10-25-Assignment4-Pu-Zeng.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Preparation">Data Preparation<a class="anchor-link" href="#Data-Preparation"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combine-Selected-Datasets-regarding-Race-Variable">Combine Selected Datasets regarding Race Variable<a class="anchor-link" href="#Combine-Selected-Datasets-regarding-Race-Variable"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This report is tring to illustrate these following study aims:</p>
+<ol>
+<li>How does the number of Doctor degree receivers in each types of study change when stratified by gender or race?  </li>
+<li>How does the number of Dctor degree receivers in each types of employment change when stratified by race? </li>
+<li>How does the number of Dctor degree receivers in each types of debt levels change when stratified by race?   </li>
+</ol>
+<p>For that, a few data tables were selected to discuss the distribution of race and gender in the variables of:</p>
+<ol>
+<li>Major field of study</li>
+<li>Employement types</li>
+<li>Debt levels</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Prior to create the dashboard visualization, there are some data processing need to be done.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First, we combined a few datatables regarding the variable, race.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Race-vs-Major-Field-of-Study-vs-Employment-Types-vs-Debt-Level">Race vs Major Field of Study vs Employment Types vs Debt Level<a class="anchor-link" href="#Race-vs-Major-Field-of-Study-vs-Employment-Types-vs-Debt-Level"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">debt_race_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/puzeng/BIOSTAT823_FALL21_Pu/main/data/raw/Debt_race_2017.csv&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">debt_race_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">debt_race_url</span><span class="p">)</span>
+<span class="n">debt_race_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Debt level</th>
+      <th>Hispanic or Latino</th>
+      <th>American Indian or Alaska Native</th>
+      <th>Asian</th>
+      <th>Black or African American</th>
+      <th>White</th>
+      <th>More than one race</th>
+      <th>Other race or race not reported</th>
+      <th>Ethnicity not reported</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>No debt</td>
+      <td>833</td>
+      <td>36</td>
+      <td>2,062</td>
+      <td>404</td>
+      <td>11,091</td>
+      <td>445</td>
+      <td>141</td>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>$10,000 or less</td>
+      <td>249</td>
+      <td>7</td>
+      <td>287</td>
+      <td>156</td>
+      <td>2,004</td>
+      <td>95</td>
+      <td>26</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>$10,001–$20,000</td>
+      <td>209</td>
+      <td>5</td>
+      <td>212</td>
+      <td>118</td>
+      <td>1,915</td>
+      <td>78</td>
+      <td>22</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>$20,001–$30,000</td>
+      <td>174</td>
+      <td>6</td>
+      <td>160</td>
+      <td>131</td>
+      <td>1,644</td>
+      <td>65</td>
+      <td>22</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>$30,001–$40,000</td>
+      <td>104</td>
+      <td>6</td>
+      <td>74</td>
+      <td>112</td>
+      <td>1,141</td>
+      <td>44</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">debt_race_df</span>  <span class="o">=</span> <span class="n">debt_race_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span> <span class="o">=</span> <span class="s1">&#39;Debt level&#39;</span><span class="p">,</span> 
+                                  <span class="n">var_name</span> <span class="o">=</span> <span class="s1">&#39;Ethnicity status&#39;</span><span class="p">,</span> 
+                                  <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">debt_race_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Debt level</th>
+      <th>Ethnicity status</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>No debt</td>
+      <td>Hispanic or Latino</td>
+      <td>833</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>$10,000 or less</td>
+      <td>Hispanic or Latino</td>
+      <td>249</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>$10,001–$20,000</td>
+      <td>Hispanic or Latino</td>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>$20,001–$30,000</td>
+      <td>Hispanic or Latino</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>$30,001–$40,000</td>
+      <td>Hispanic or Latino</td>
+      <td>104</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employment_race_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/puzeng/BIOSTAT823_FALL21_Pu/main/data/raw/Employment_race_2017.csv&#39;</span>
+<span class="n">employment_race_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">employment_race_url</span><span class="p">)</span>
+<span class="n">employment_race_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employment Types</th>
+      <th>Hispanic or Latino</th>
+      <th>American Indian or Alaska Native</th>
+      <th>Asian</th>
+      <th>Black or African American</th>
+      <th>White</th>
+      <th>More than one race</th>
+      <th>Other race or race not reported</th>
+      <th>Ethnicity not reported</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898.0</td>
+      <td>41</td>
+      <td>1,121</td>
+      <td>944.0</td>
+      <td>9,969</td>
+      <td>365</td>
+      <td>107.0</td>
+      <td>46.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Academe (%)</td>
+      <td>55.3</td>
+      <td>51.2</td>
+      <td>39</td>
+      <td>51.9</td>
+      <td>51.7</td>
+      <td>48.8</td>
+      <td>48.6</td>
+      <td>54.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Government (%)</td>
+      <td>10.5</td>
+      <td>D</td>
+      <td>7.1</td>
+      <td>13.0</td>
+      <td>8.9</td>
+      <td>D</td>
+      <td>13.1</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Industry or business (%)</td>
+      <td>22.6</td>
+      <td>29.3</td>
+      <td>44.7</td>
+      <td>14.1</td>
+      <td>25.5</td>
+      <td>29</td>
+      <td>26.2</td>
+      <td>23.9</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Nonprofit organization (%)</td>
+      <td>5.1</td>
+      <td>D</td>
+      <td>6.6</td>
+      <td>8.7</td>
+      <td>7.3</td>
+      <td>D</td>
+      <td>5.6</td>
+      <td>4.3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">employment_race_df</span> <span class="o">=</span> <span class="n">employment_race_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span> <span class="o">=</span> <span class="s1">&#39;Employment Types&#39;</span><span class="p">,</span> 
+                                             <span class="n">var_name</span> <span class="o">=</span> <span class="s1">&#39;Ethnicity status&#39;</span><span class="p">)</span>
+<span class="n">employment_race_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Employment Types</th>
+      <th>Ethnicity status</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All U.S. employment commitments (number)</td>
+      <td>Hispanic or Latino</td>
+      <td>898</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Academe (%)</td>
+      <td>Hispanic or Latino</td>
+      <td>55.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Government (%)</td>
+      <td>Hispanic or Latino</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Industry or business (%)</td>
+      <td>Hispanic or Latino</td>
+      <td>22.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Nonprofit organization (%)</td>
+      <td>Hispanic or Latino</td>
+      <td>5.1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">race_study_field_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/puzeng/BIOSTAT823_FALL21_Pu/main/data/raw/Race_Fine_Field_Study.csv&#39;</span>
+<span class="n">race_study_field_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">race_study_field_url</span><span class="p">)</span>
+<span class="n">race_study_field_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Field of study</th>
+      <th>Hispanic or Latino</th>
+      <th>American Indian or Alaska Native</th>
+      <th>Asian</th>
+      <th>Black or African American</th>
+      <th>White</th>
+      <th>More than one race</th>
+      <th>Other race or race not reported</th>
+      <th>Ethnicity not reported</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All fields</td>
+      <td>2,540</td>
+      <td>109</td>
+      <td>3,502</td>
+      <td>2,409</td>
+      <td>24,880</td>
+      <td>1,016</td>
+      <td>471</td>
+      <td>864</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Life sciences</td>
+      <td>606</td>
+      <td>25</td>
+      <td>1,014</td>
+      <td>577</td>
+      <td>6,059</td>
+      <td>286</td>
+      <td>107</td>
+      <td>183</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>49</td>
+      <td>2</td>
+      <td>62</td>
+      <td>41</td>
+      <td>674</td>
+      <td>19</td>
+      <td>13</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Agricultural economics</td>
+      <td>2</td>
+      <td>0</td>
+      <td>4</td>
+      <td>3</td>
+      <td>38</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Agronomy, horticulture science, plant breeding...</td>
+      <td>11</td>
+      <td>1</td>
+      <td>17</td>
+      <td>5</td>
+      <td>150</td>
+      <td>5</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">race_study_field_df</span> <span class="o">=</span> <span class="n">race_study_field_df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span> <span class="o">=</span> <span class="s1">&#39;Field of study&#39;</span><span class="p">,</span> 
+                                               <span class="n">var_name</span> <span class="o">=</span> <span class="s1">&#39;Ethnicity status&#39;</span><span class="p">,</span> 
+                                               <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;Number of count&#39;</span><span class="p">)</span>
+<span class="n">race_study_field_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Field of study</th>
+      <th>Ethnicity status</th>
+      <th>Number of count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Life sciences</td>
+      <td>Hispanic or Latino</td>
+      <td>606</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>Hispanic or Latino</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Agricultural economics</td>
+      <td>Hispanic or Latino</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Agronomy, horticulture science, plant breeding...</td>
+      <td>Hispanic or Latino</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">race_phd_info</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">race_study_field_df</span><span class="o">.</span>
+    <span class="n">merge</span><span class="p">(</span><span class="n">employment_race_df</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Ethnicity status&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span> <span class="p">)</span><span class="o">.</span>
+    <span class="n">merge</span><span class="p">(</span><span class="n">debt_race_df</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;Ethnicity status&#39;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span> <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">race_phd_info</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Field of study</th>
+      <th>Ethnicity status</th>
+      <th>Number of count</th>
+      <th>Employment Types</th>
+      <th>value</th>
+      <th>Debt level</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898</td>
+      <td>No debt</td>
+      <td>833</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898</td>
+      <td>$10,000 or less</td>
+      <td>249</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898</td>
+      <td>$10,001–$20,000</td>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898</td>
+      <td>$20,001–$30,000</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>All fields</td>
+      <td>Hispanic or Latino</td>
+      <td>2,540</td>
+      <td>All U.S. employment commitments (number)</td>
+      <td>898</td>
+      <td>$30,001–$40,000</td>
+      <td>104</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sex-vs-Major-Field-of-Study">Sex vs Major Field of Study<a class="anchor-link" href="#Sex-vs-Major-Field-of-Study"> </a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We then will add the sex column to the below data table.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sex_field_study_url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/puzeng/BIOSTAT823_FALL21_Pu/main/data/raw/Sex_Fine_Filed_Study.csv&#39;</span>
+<span class="n">sex_field_study_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">sex_field_study_url</span><span class="p">)</span>
+<span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex and major field of study</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>% change 2008–17</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>All doctorate recipientsa</td>
+      <td>48,777</td>
+      <td>49,552</td>
+      <td>48,029</td>
+      <td>48,911</td>
+      <td>50,944</td>
+      <td>52,704</td>
+      <td>53,992</td>
+      <td>54,901</td>
+      <td>54,862</td>
+      <td>54,664</td>
+      <td>12.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Life sciences</td>
+      <td>11,086</td>
+      <td>11,403</td>
+      <td>11,319</td>
+      <td>11,535</td>
+      <td>11,964</td>
+      <td>12,208</td>
+      <td>12,484</td>
+      <td>12,499</td>
+      <td>12,554</td>
+      <td>12,592</td>
+      <td>13.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>1,198</td>
+      <td>1,283</td>
+      <td>1,100</td>
+      <td>1,206</td>
+      <td>1,255</td>
+      <td>1,324</td>
+      <td>1,338</td>
+      <td>1,434</td>
+      <td>1,381</td>
+      <td>1,606</td>
+      <td>34.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Biological and biomedical sciences</td>
+      <td>7,797</td>
+      <td>8,025</td>
+      <td>8,046</td>
+      <td>8,152</td>
+      <td>8,322</td>
+      <td>8,355</td>
+      <td>8,868</td>
+      <td>8,788</td>
+      <td>8,873</td>
+      <td>8,477</td>
+      <td>8.7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Health sciences</td>
+      <td>2,091</td>
+      <td>2,095</td>
+      <td>2,173</td>
+      <td>2,177</td>
+      <td>2,387</td>
+      <td>2,529</td>
+      <td>2,278</td>
+      <td>2,277</td>
+      <td>2,300</td>
+      <td>2,509</td>
+      <td>20.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">male_index</span> <span class="o">=</span> <span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">][</span><span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">female_index</span> <span class="o">=</span> <span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">][</span><span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ALL</span> <span class="o">=</span> <span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="n">male_index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">:]</span>
+<span class="n">MALE</span> <span class="o">=</span> <span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">male_index</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">female_index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">FEMALE</span> <span class="o">=</span> <span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">female_index</span><span class="p">[</span><span class="mi">0</span><span class="p">]:,</span> <span class="p">:]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ALL</span> <span class="o">=</span> <span class="n">ALL</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Sex</span> <span class="o">=</span> <span class="s1">&#39;All&#39;</span><span class="p">)</span>
+<span class="n">ALL</span> <span class="o">=</span> <span class="n">ALL</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">ALL</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">ALL</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex and major field of study</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>% change 2008–17</th>
+      <th>Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Life sciences</td>
+      <td>11,086</td>
+      <td>11,403</td>
+      <td>11,319</td>
+      <td>11,535</td>
+      <td>11,964</td>
+      <td>12,208</td>
+      <td>12,484</td>
+      <td>12,499</td>
+      <td>12,554</td>
+      <td>12,592</td>
+      <td>13.6</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>1,198</td>
+      <td>1,283</td>
+      <td>1,100</td>
+      <td>1,206</td>
+      <td>1,255</td>
+      <td>1,324</td>
+      <td>1,338</td>
+      <td>1,434</td>
+      <td>1,381</td>
+      <td>1,606</td>
+      <td>34.1</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Biological and biomedical sciences</td>
+      <td>7,797</td>
+      <td>8,025</td>
+      <td>8,046</td>
+      <td>8,152</td>
+      <td>8,322</td>
+      <td>8,355</td>
+      <td>8,868</td>
+      <td>8,788</td>
+      <td>8,873</td>
+      <td>8,477</td>
+      <td>8.7</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Health sciences</td>
+      <td>2,091</td>
+      <td>2,095</td>
+      <td>2,173</td>
+      <td>2,177</td>
+      <td>2,387</td>
+      <td>2,529</td>
+      <td>2,278</td>
+      <td>2,277</td>
+      <td>2,300</td>
+      <td>2,509</td>
+      <td>20.0</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Physical sciences and earth sciences</td>
+      <td>4,946</td>
+      <td>5,160</td>
+      <td>4,995</td>
+      <td>5,271</td>
+      <td>5,419</td>
+      <td>5,584</td>
+      <td>5,911</td>
+      <td>5,918</td>
+      <td>6,252</td>
+      <td>6,081</td>
+      <td>22.9</td>
+      <td>All</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">MALE</span> <span class="o">=</span> <span class="n">MALE</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Sex</span> <span class="o">=</span> <span class="s1">&#39;Male&#39;</span><span class="p">)</span>
+<span class="n">MALE</span> <span class="o">=</span> <span class="n">MALE</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">MALE</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">MALE</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex and major field of study</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>% change 2008–17</th>
+      <th>Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Life sciences</td>
+      <td>5,223</td>
+      <td>5,183</td>
+      <td>5,101</td>
+      <td>5,243</td>
+      <td>5,335</td>
+      <td>5,492</td>
+      <td>5,514</td>
+      <td>5,566</td>
+      <td>5,634</td>
+      <td>5,629</td>
+      <td>7.8</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>700</td>
+      <td>722</td>
+      <td>609</td>
+      <td>652</td>
+      <td>698</td>
+      <td>702</td>
+      <td>691</td>
+      <td>746</td>
+      <td>756</td>
+      <td>809</td>
+      <td>15.6</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Biological and biomedical sciences</td>
+      <td>3,861</td>
+      <td>3,834</td>
+      <td>3,823</td>
+      <td>3,878</td>
+      <td>3,891</td>
+      <td>3,941</td>
+      <td>4,088</td>
+      <td>4,103</td>
+      <td>4,159</td>
+      <td>4,014</td>
+      <td>4.0</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Health sciences</td>
+      <td>662</td>
+      <td>627</td>
+      <td>669</td>
+      <td>713</td>
+      <td>746</td>
+      <td>849</td>
+      <td>735</td>
+      <td>717</td>
+      <td>719</td>
+      <td>806</td>
+      <td>21.8</td>
+      <td>Male</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Physical sciences and earth sciences</td>
+      <td>3,505</td>
+      <td>3,533</td>
+      <td>3,379</td>
+      <td>3,629</td>
+      <td>3,684</td>
+      <td>3,717</td>
+      <td>3,969</td>
+      <td>3,930</td>
+      <td>4,286</td>
+      <td>4,068</td>
+      <td>16.1</td>
+      <td>Male</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">FEMALE</span> <span class="o">=</span> <span class="n">FEMALE</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Sex</span> <span class="o">=</span> <span class="s1">&#39;Female&#39;</span><span class="p">)</span>
+<span class="n">FEMALE</span> <span class="o">=</span> <span class="n">FEMALE</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">FEMALE</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">FEMALE</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex and major field of study</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>% change 2008–17</th>
+      <th>Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Life sciences</td>
+      <td>5,859</td>
+      <td>6,210</td>
+      <td>6,213</td>
+      <td>6,289</td>
+      <td>6,614</td>
+      <td>6,713</td>
+      <td>6,930</td>
+      <td>6,932</td>
+      <td>6,918</td>
+      <td>6,958</td>
+      <td>18.8</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>498</td>
+      <td>559</td>
+      <td>490</td>
+      <td>554</td>
+      <td>554</td>
+      <td>622</td>
+      <td>646</td>
+      <td>688</td>
+      <td>624</td>
+      <td>795</td>
+      <td>59.6</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Biological and biomedical sciences</td>
+      <td>3,934</td>
+      <td>4,185</td>
+      <td>4,219</td>
+      <td>4,272</td>
+      <td>4,422</td>
+      <td>4,411</td>
+      <td>4,747</td>
+      <td>4,684</td>
+      <td>4,713</td>
+      <td>4,461</td>
+      <td>13.4</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Health sciences</td>
+      <td>1,427</td>
+      <td>1,466</td>
+      <td>1,504</td>
+      <td>1,463</td>
+      <td>1,638</td>
+      <td>1,680</td>
+      <td>1,537</td>
+      <td>1,560</td>
+      <td>1,581</td>
+      <td>1,702</td>
+      <td>19.3</td>
+      <td>Female</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Physical sciences and earth sciences</td>
+      <td>1,440</td>
+      <td>1,618</td>
+      <td>1,615</td>
+      <td>1,640</td>
+      <td>1,730</td>
+      <td>1,864</td>
+      <td>1,924</td>
+      <td>1,987</td>
+      <td>1,963</td>
+      <td>2,011</td>
+      <td>39.7</td>
+      <td>Female</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sex_field_study_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">ALL</span><span class="p">,</span> <span class="n">MALE</span><span class="p">,</span> <span class="n">FEMALE</span><span class="p">],</span><span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sex_field_study_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex and major field of study</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>% change 2008–17</th>
+      <th>Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Life sciences</td>
+      <td>11,086</td>
+      <td>11,403</td>
+      <td>11,319</td>
+      <td>11,535</td>
+      <td>11,964</td>
+      <td>12,208</td>
+      <td>12,484</td>
+      <td>12,499</td>
+      <td>12,554</td>
+      <td>12,592</td>
+      <td>13.6</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Agricultural sciences and natural resources</td>
+      <td>1,198</td>
+      <td>1,283</td>
+      <td>1,100</td>
+      <td>1,206</td>
+      <td>1,255</td>
+      <td>1,324</td>
+      <td>1,338</td>
+      <td>1,434</td>
+      <td>1,381</td>
+      <td>1,606</td>
+      <td>34.1</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Biological and biomedical sciences</td>
+      <td>7,797</td>
+      <td>8,025</td>
+      <td>8,046</td>
+      <td>8,152</td>
+      <td>8,322</td>
+      <td>8,355</td>
+      <td>8,868</td>
+      <td>8,788</td>
+      <td>8,873</td>
+      <td>8,477</td>
+      <td>8.7</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Health sciences</td>
+      <td>2,091</td>
+      <td>2,095</td>
+      <td>2,173</td>
+      <td>2,177</td>
+      <td>2,387</td>
+      <td>2,529</td>
+      <td>2,278</td>
+      <td>2,277</td>
+      <td>2,300</td>
+      <td>2,509</td>
+      <td>20.0</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Physical sciences and earth sciences</td>
+      <td>4,946</td>
+      <td>5,160</td>
+      <td>4,995</td>
+      <td>5,271</td>
+      <td>5,419</td>
+      <td>5,584</td>
+      <td>5,911</td>
+      <td>5,918</td>
+      <td>6,252</td>
+      <td>6,081</td>
+      <td>22.9</td>
+      <td>All</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dashboard-Visualization">Dashboard Visualization<a class="anchor-link" href="#Dashboard-Visualization"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The dashboard is built on <code>Streamlit</code> which is an open-source python framework to build web apps, where you can retrieve from here <a href="https://share.streamlit.io/puzeng/biostat823_streamlit/main/Streamlit_App.py">Pu's Dashboard Visualization</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this dashboard, you can explore the relationship between gender variable with major field of study for the PhD awards from year 2008 to year 2017. However, if you want to compare the number of PhD awards by gender, the dashboard only focus on data in year 2017.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can also look at the race distribution against the variable, major field of study, employment types, and debt levels.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How to interact with the dashboard is detailedly described in the web app. The script, <code>Streamlit_App</code> for building the web app can be retrieved from this GitHub repo <a href="https://github.com/puzeng/BIOSTAT823_Streamlit">Streamlit Web App</a>. The datasets used in the web app are also included in the repo.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reference">Reference<a class="anchor-link" href="#Reference"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>National Science Foundation, National Center for Science and Engineering Statistics. 2018. 
+Doctorate Recipients from U.S. Universities: 2017. 
+Special Report NSF 19-301. Alexandria, VA. Available at <a href="https://ncses.nsf.gov/pubs/nsf19301/">https://ncses.nsf.gov/pubs/nsf19301/</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/BIOSTAT823_Blog_PuZeng/2021/10/25/Assignment4-Pu-Zeng.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BIOSTAT823_Blog_PuZeng/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BIOSTAT823_Blog_PuZeng/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BIOSTAT823_Blog_PuZeng/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
